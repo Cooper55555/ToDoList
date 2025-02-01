@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .container {
     width: 300px;
     margin: 50px auto;
@@ -13,26 +12,21 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 h1 {
     text-align: center;
 }
-
 input {
     width: 70%;
     padding: 10px;
     margin-right: 10px;
 }
-
 button {
     padding: 10px;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
 }
-
 li {
     padding: 10px;
     border-bottom: 1px solid #ddd;
@@ -40,11 +34,9 @@ li {
     justify-content: space-between;
     align-items: center;
 }
-
 li:hover {
-    background-color: #f0f0f0;
+    background: #f0f0f0;
 }
-
 button.delete {
     background-color: red;
     color: white;
@@ -52,7 +44,18 @@ button.delete {
     padding: 5px 10px;
     cursor: pointer;
 }
-
 button.delete:hover {
     background-color: darkred;
+}
+.date {
+    font-size: 0.8em;
+    color: gray;
+}
+.task-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Takes available space */
+}
+.task-text {
+    margin: 5px 0; /* Add space between the date and the task */
 }
