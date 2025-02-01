@@ -1,61 +1,92 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .container {
-    width: 300px;
-    margin: 50px auto;
+    width: 400px;
+    margin: auto;
     padding: 20px;
     background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px;
 }
+
 h1 {
     text-align: center;
+    color: #333;
 }
-input {
-    width: 70%;
+
+input[type="text"], input[type="datetime-local"] {
+    width: calc(100% - 22px);
     padding: 10px;
-    margin-right: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
+
 button {
+    width: 100%;
     padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+button:hover {
+    background-color: #4cae4c;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
 }
+
 li {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 5px;
+    max-width: calc(100% - 50px);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-li:hover {
-    background: #f0f0f0;
+
+.task-text {
+    flex-grow: 1;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
+
+.task-content {
+    max-width: 70%;
+    width: 70%;
+}
+
 button.delete {
-    background-color: red;
+    background-color: chocolate;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 5px;
+    border-radius: 4px;
     cursor: pointer;
-}
-button.delete:hover {
-    background-color: darkred;
-}
-.date {
-    font-size: 0.8em;
-    color: gray;
-}
-.task-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Takes available space */
-}
-.task-text {
-    margin: 5px 0; /* Add space between the date and the task */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 30%;
 }

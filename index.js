@@ -7,14 +7,17 @@ function loadTasks() {
 
 function addTask() {
     const taskInput = document.getElementById("taskInput");
+    const taskDateInput = document.getElementById("taskDate");
     const taskText = taskInput.value.trim();
-    if (taskText !== "") {
-        const date = new Date().toLocaleString(); // Get local date and time
-        addTaskToDOM(taskText, date);
-        saveTask(taskText, date);
-        taskInput.value = ""; // clear input
+    const taskDate = taskDateInput.value;
+
+    if (taskText !== "" && taskDate !== "") {
+        addTaskToDOM(taskText, taskDate);
+        saveTask(taskText, taskDate);
+        taskInput.value = "";
+        taskDateInput.value = "";
     } else {
-        alert("Please enter a task!");
+        alert("Please enter a task and select a date/time!");
     }
 }
 
@@ -26,7 +29,7 @@ function addTaskToDOM(taskText, date) {
     taskContent.className = "task-content";
 
     const dateElement = document.createElement("div");
-    dateElement.textContent = date;
+    dateElement.textContent = new Date(date).toLocaleString();
     dateElement.className = "date";
 
     const taskTextElement = document.createElement("div");
