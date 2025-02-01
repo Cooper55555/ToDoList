@@ -62,7 +62,6 @@ li {
     background-color: #fafafa;
     border-radius: 4px;
     margin-top: 5px;
-    max-width: calc(100% - 50px);
     overflow: hidden;
     text-overflow: ellipsis;
 }
